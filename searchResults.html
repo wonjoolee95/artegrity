@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>Artegrity</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles/loading-bar.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+  </head>
+  <body>
+  <div class="container-fluid">
+    <div class="row header justify-content-left align-items-center">
+        <form class="form-inline" action="searchResults.html" method="GET">
+          <span class="lead brand"><a href="index.html">Artegrity</a></span>
+          <input class="form-control" type="text" name="url" id="search-page-input">
+          <button class="btn btn-outline-primary" type="submit" id="search-page-button">Analyze!</button>
+        </form>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <br>
+        <p id="article-title" class="article-title"></p>
+        <p class="small"><span id="article-author"></span><br><span id="article-date"></span></p>
+      </div>
+      <div class="col-6 col-md-3">
+        <p class="text-center score-title">Title</p>
+        <p id="article-title-score" class="text-center score"></p>
+      </div>
+      <div class="col-6 col-md-3">
+        <p class="text-center score-title">Article</p>
+        <p id="article-score" class="text-center score"></p>
+      </div>
+    </div>
+    <hr class="hr-report">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="lead text-center">Title Analysis</h4>
+      </div>
+      <div class="col-3 offset-2">
+        <p>Decision: <span id="title-decision" class="report"></span></p>
+        <p>Score: <span id="title-score" class="report"></span></p>
+      </div>
+      <div class="col-6">
+        <div id="title-ldBar" data-preset="fan" class="ldBar label-center"></div> 
+      </div>
+    </div>
+    <hr class="hr-report">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="lead text-center">Content Analysis</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 offset-2">
+        <p>Decision: <span id="content-decision" class="report"></span></p>
+        <p>Score: <span id="content-score" class="report"></span></p>
+        <p>Keywords: <span id="content-keywords" class="report"></span></p>
+      </div>
+      <div class="col-6">
+        <div id="content-ldBar" data-preset="fan" class="ldBar label-center align-middle"></div> 
+      </div>
+    </div>
+    <hr class="hr-report">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="lead text-center">Domain Analysis</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 offset-2">
+        <p>Decision: <span id="domain-decision" class="report"></span></p>
+        <p>Domain: <span id="domain-name" class="report"></span></p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <footer class="footer">
+      <p class="text-muted text-center small">Fake News | INF 134</p>
+    </footer>
+  </div>
+
+  <script type="text/javascript" src="javascript/loading-bar.js"></script>
+  <script type="text/javascript" src="javascript/search_script.js"></script>
+  </body>
+</html>
